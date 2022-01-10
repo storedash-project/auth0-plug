@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="joken" type="mix">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/joken/lib" />
+      <root url="file://$PROJECT_DIR$/deps/joken/lib" />
+      <root url="file://$PROJECT_DIR$/deps/joken/lib" />
+    </SOURCES>
+  </library>
+</component>
