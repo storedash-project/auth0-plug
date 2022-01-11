@@ -9,7 +9,7 @@ defmodule Auth0.Auth.Authorize do
     Error raised when inserting to the database.
     """
 
-    defexception message: "An error occurred in Auth0 Plug", status: 401
+    defexception message: "An error occurred in Auth0 Plug", plug_status: 401
   end
 
   import Plug.Conn
