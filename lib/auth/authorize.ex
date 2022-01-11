@@ -9,7 +9,7 @@ defmodule Auth0.Auth.Authorize do
     Error raised when inserting to the database.
     """
 
-    defexception message: "An error occurred in Auth0 Plug", plug_status: 401
+    defexception message: "An error occurred in Auth0 Plug", status: 401
   end
 
   import Plug.Conn
@@ -42,6 +42,6 @@ defmodule Auth0.Auth.Authorize do
   end
 
   defp handle_error_response(conn, error) do
-    raise Auth0.Auth.Authorize.Auth0PlugError, message: error
+    raise Auth0.Auth.Authorize.Auth0PlugError, message: Atom.to_string(error)
   end
 end
