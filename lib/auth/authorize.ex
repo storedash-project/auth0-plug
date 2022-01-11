@@ -4,6 +4,14 @@ defmodule Auth0.Auth.Authorize do
   """
   @behaviour Plug
 
+  defmodule Auth0PlugError do
+    @moduledoc """
+    Error raised when inserting to the database.
+    """
+
+    defexception message: "An error occurred in Auth0 Plug", plug_status: 401
+  end
+
   import Plug.Conn
   alias Auth0.Auth.Token
 
@@ -34,16 +42,6 @@ defmodule Auth0.Auth.Authorize do
   end
 
   defp handle_error_response(conn, error) do
-    conn
-    |> put_resp_content_type("application/json")
-    |> send_resp(
-         401,
-         Jason.encode!(
-           %{
-             success: false,
-             message: error,
-           }
-         )
-       )
+    raise Auth0.Auth.Authorize.Auth0PlugError, message: error
   end
 end
