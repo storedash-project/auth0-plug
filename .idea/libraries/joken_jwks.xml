@@ -1,8 +1,12 @@
 <component name="libraryTable">
   <library name="joken_jwks" type="mix">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/joken_jwks/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/joken_jwks/ebin" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/joken_jwks/lib" />
       <root url="file://$PROJECT_DIR$/deps/joken_jwks/lib" />
       <root url="file://$PROJECT_DIR$/deps/joken_jwks/lib" />
       <root url="file://$PROJECT_DIR$/deps/joken_jwks/lib" />
