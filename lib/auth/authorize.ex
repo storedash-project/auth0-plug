@@ -52,7 +52,7 @@ defmodule Auth0.Auth.Authorize do
   end
 
   # Handle the generic case
-  defp handle_error_response(_conn, error) do
+  defp handle_error_response(_conn, _error) do
     raise Auth0.Auth.Authorize.Auth0PlugError
   end
 end
