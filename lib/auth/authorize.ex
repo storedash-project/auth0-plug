@@ -46,6 +46,6 @@ defmodule Auth0.Auth.Authorize do
   end
 
   defp handle_error_response(conn, error) when is_list(error) do
-    raise Auth0.Auth.Authorize.Auth0PlugError, message: error["message"]
+    raise Auth0.Auth.Authorize.Auth0PlugError, message: error[:message]
   end
 end
