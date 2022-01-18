@@ -24,7 +24,8 @@ defmodule Auth0Plug.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:jason, "~> 1.2"},
       {:joken, "~> 2.4"},
-      {:joken_jwks, "~> 1.5"}
+      {:joken_jwks, "~> 1.5"},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false}
     ]
   end
 end
