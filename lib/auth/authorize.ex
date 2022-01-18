@@ -41,7 +41,12 @@ defmodule Auth0.Auth.Authorize do
     end
   end
 
-  defp handle_error_response(conn, error) do
+  defp handle_error_response(conn, error) when is_atom(error) do
     raise Auth0.Auth.Authorize.Auth0PlugError, message: Atom.to_string(error)
+  end
+
+  defp handle_error_response(conn, error) do
+    IO.inspect(error)
+    raise error
   end
 end
