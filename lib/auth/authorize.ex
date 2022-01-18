@@ -41,11 +41,18 @@ defmodule Auth0.Auth.Authorize do
     end
   end
 
-  defp handle_error_response(conn, error) when is_atom(error) do
+  # Handle atom case.
+  defp handle_error_response(_conn, error) when is_atom(error) do
     raise Auth0.Auth.Authorize.Auth0PlugError, message: Atom.to_string(error)
   end
 
-  defp handle_error_response(conn, error) when is_list(error) do
+  # Handle list case.
+  defp handle_error_response(_conn, error) when is_list(error) do
     raise Auth0.Auth.Authorize.Auth0PlugError, message: error[:message]
+  end
+
+  # Handle the generic case
+  defp handle_error_response(_conn, error) do
+    raise Auth0.Auth.Authorize.Auth0PlugError
   end
 end
