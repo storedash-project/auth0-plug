@@ -35,6 +35,9 @@
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/telemetry" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/metrics" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/idna" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/credo" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/file_system" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/bunt" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="plug_cowboy" level="project" />
@@ -78,5 +81,7 @@
     <orderEntry type="library" name="inch_ex" level="project" />
     <orderEntry type="library" name="cowlib" level="project" />
     <orderEntry type="library" name="ranch" level="project" />
+    <orderEntry type="library" name="file_system" level="project" />
+    <orderEntry type="library" name="bunt" level="project" />
   </component>
 </module>
