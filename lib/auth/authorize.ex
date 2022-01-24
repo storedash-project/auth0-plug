@@ -25,7 +25,7 @@ defmodule Auth0.Auth.Authorize do
   def call(conn, _default) do
     with {:ok, token} when is_binary(token) <- get_token(conn),
          {:ok, claims} <- Token.verify_and_validate(token) do
-      conn |> put_private(:auth0_plug_claims, claims)
+      conn |> put_private(:auth0_jwt, claims)
     else
       {:error, error} -> handle_error_response(conn, error)
     end
